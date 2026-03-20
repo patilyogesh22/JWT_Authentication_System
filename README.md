@@ -6,7 +6,7 @@ A full-stack authentication system built with **Django REST Framework** and **JW
 
 ---
 
-App is now live at **http://YOUR_EC2_PUBLIC_IP**
+App is now live at **http://3.108.42.209/**
 
 ## Features
 

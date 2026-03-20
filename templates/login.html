@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}Login — JWT Auth{% endblock %}
+
+{% block content %}
+<div class="card">
+
+  <!-- logo mark -->
+  <div class="logo-mark">
+    <svg viewBox="0 0 24 24">
+      <rect x="3" y="11" width="18" height="11" rx="2"/>
+      <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+    </svg>
+  </div>
+
+  <h2>Welcome back</h2>
+  <p class="subtitle">Sign in to your account to continue</p>
+
+  <div class="field-group">
+    <label for="username">Username</label>
+    <div class="input-wrap">
+      <input type="text" id="username" placeholder="Enter your username" autocomplete="username">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label for="password">Password</label>
+    <div class="input-wrap">
+      <input type="password" id="password" placeholder="Enter your password" autocomplete="current-password">
+      <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+    </div>
+  </div>
+
+  <button class="btn-primary" onclick="login(this)">Sign In</button>
+
+  <p id="msg"></p>
+
+  <div class="footer-link">
+    Don't have an account? <a href="/register/">Create one</a>
+  </div>
+
+</div>
+{% endblock %}

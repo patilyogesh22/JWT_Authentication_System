@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block title %}Register — JWT Auth{% endblock %}
+
+{% block content %}
+<div class="card">
+
+  <!-- logo mark -->
+  <div class="logo-mark">
+    <svg viewBox="0 0 24 24">
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+      <circle cx="9" cy="7" r="4"/>
+      <line x1="19" y1="8" x2="19" y2="14"/>
+      <line x1="22" y1="11" x2="16" y2="11"/>
+    </svg>
+  </div>
+
+  <h2>Create account</h2>
+  <p class="subtitle">Join us — it only takes a few seconds</p>
+
+  {% csrf_token %}
+
+  <div class="field-group">
+    <label for="username">Username</label>
+    <div class="input-wrap">
+      <input type="text" id="username" placeholder="Choose a username" autocomplete="username">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label for="email">Email address</label>
+    <div class="input-wrap">
+      <input type="email" id="email" placeholder="you@example.com" autocomplete="email">
+      <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label for="password">Password</label>
+    <div class="input-wrap">
+      <input type="password" id="password" placeholder="Min 8 characters" autocomplete="new-password">
+      <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+    </div>
+  </div>
+
+  <button class="btn-primary" onclick="register(this)">Create Account</button>
+
+  <p id="msg"></p>
+
+  <div class="footer-link">
+    Already have an account? <a href="/">Sign in</a>
+  </div>
+
+</div>
+{% endblock %}
